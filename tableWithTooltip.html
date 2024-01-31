@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .table-container {
+            box-sizing: border-box;
+            padding: 50px;
+            display: flex;
+            gap: 50px;
+            overflow-x: hidden;
+        }
+
+        .column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+        }
+
+        .raw {
+            border: 1px solid #808080;
+            padding: 15px;
+            box-sizing: border-box;
+            position: relative;
+            border-radius: 3px;
+        }
+
+        .tooltip {
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            background-color: #333;
+            color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .raw:hover .tooltip {
+            opacity: 1;
+        }
+    </style>
+    <title>Responsive Table Example</title>
+</head>
+<body>
+<div class="table-container">
+    <div class="column">
+        <div class="raw">
+            Header
+            <div class="tooltip">Tooltip 1</div>
+        </div>
+        <div class="raw">
+            Row 1
+            <div class="tooltip">Tooltip 4</div>
+        </div>
+        <div class="raw">
+            Raw 2
+            <div class="tooltip">Tooltip 7</div>
+        </div>
+    </div>
+    <div class="column">
+        <div class="raw">
+            Header
+            <div class="tooltip">Tooltip 2</div>
+        </div>
+        <div class="raw">
+            Row 2
+            <div class="tooltip">Tooltip 5</div>
+        </div>
+        <div class="raw">
+            Raw 2
+            <div class="tooltip">Tooltip 8</div>
+        </div>
+    </div>
+    <div class="column">
+        <div class="raw">
+            Header
+            <div class="tooltip">Tooltip 3</div>
+        </div>
+        <div class="raw">
+            Raw 1
+            <div class="tooltip">Tooltip 6</div>
+        </div>
+        <div class="raw">
+            Raw 2
+            <div class="tooltip">Tooltip 9</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
